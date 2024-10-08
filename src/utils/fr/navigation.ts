@@ -1,28 +1,25 @@
 
 const navBarLinks = [
   { name: "Accueil", url: "/fr" },
-  { name: "Produits", url: "/fr/products" },
+  { name: "About", url: "/fr/about" },
   { name: "Services", url: "/fr/services" },
-  { name: "Blog", url: "/fr/blog" },
   { name: "Contact", url: "/fr/contact" },
 ];
 
 const footerLinks = [
   {
-    section: "Écosystème",
+    section: "Entreprise",
     links: [
-      { name: "Documentation", url: "/fr/welcome-to-docs/" },
-      { name: "Outils et Équipements", url: "/fr/products" },
-      { name: "Services de Construction", url: "/fr/services" },
+      { name: "Services", url: "/services" },
+      { name: "À propos", url: "/about" },
+      { name: "Nous contactez", url: "/contact" },
     ],
   },
   {
-    section: "Société",
+    section: "Ressources",
     links: [
-      { name: "À propos de nous", url: "#" },
-      { name: "Blog", url: "/fr/blog" },
-      { name: "Carrières", url: "#" },
-      { name: "Clients", url: "#" },
+      { name: "Réservez un un rendez-vous", url: "#" },
+      { name: "F.A.Q", url: "#" },
     ],
   },
 ];
@@ -30,7 +27,7 @@ const footerLinks = [
 const socialLinks = {
   facebook: "#",
   x: "#",
-  github: "https://github.com/mearashadowfax/ScrewFast",
+  github: "https://github.com/",
   google: "#",
   slack: "#",
 };

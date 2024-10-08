@@ -1,8 +1,6 @@
 ---
-// Define props from Astro
 const { title, subTitle } = Astro.props;
 
-// Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
@@ -12,7 +10,6 @@ interface Props {
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <!-- Title and description -->
   <div class="mx-auto mb-6 w-full space-y-1 text-center sm:w-1/2 lg:w-1/3">
     <h2
       class="text-balance text-2xl font-bold leading-tight text-neutral-800 dark:text-neutral-200 sm:text-3xl"
@@ -30,8 +27,6 @@ interface Props {
   <div
     class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
   >
-    <!-- Clients Group SVGs -->
-    <!-- First -->
     <svg
       class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5"
       viewBox="0 0 1033.583 318.543"
@@ -49,7 +44,6 @@ interface Props {
         style="fill:#6B7280;fill-opacity:1;fill-rule:nonzero;stroke:none"
         transform="translate(98.847 -259.733)"></path>
     </svg>
-    <!-- Second -->
     <svg
       class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5"
       viewBox="0 0 150 40"
@@ -75,7 +69,6 @@ interface Props {
         d="M137.873 33.477h3.611V26.69h6.878v-2.807h-6.878V20.09h7.937V17.05h-11.548v16.426ZM37.73 33.49h3.608v-7.085h6.648v7.086h3.612V17.065h-3.612v6.303h-6.648v-6.303h-3.607v16.426Z"
       ></path>
     </svg>
-    <!-- Third -->
     <svg
       class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5"
       viewBox="0 0 150 39"
@@ -111,7 +104,6 @@ interface Props {
         </clipPath>
       </defs>
     </svg>
-    <!-- Fourth -->
     <svg
       class="mx-auto h-auto w-24 py-3 sm:mx-0 md:w-32 lg:w-40 lg:py-5"
       viewBox="0 0 100 42"
