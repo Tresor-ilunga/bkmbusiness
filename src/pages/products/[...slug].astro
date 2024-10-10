@@ -3,7 +3,6 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import ProductTabBtn from "@components/ui/buttons/ProductTabBtn.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
 
@@ -63,13 +62,11 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         </p>
       </div>
       <div>
-        <Image
-          id="fadeInMoveRight"
-          src={product.data.main.imgMain}
+        <img
+          src=""
+          alt="products"
           class="w-[600px]"
-          alt={product.data.main.imgAlt}
-          format={"avif"}
-          loading={"eager"}
+
         />
       </div>
     </div>
@@ -225,11 +222,10 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       >
         {
           product.data.blueprints.first && (
-            <Image
-              src={product.data.blueprints.first}
-              class="h-full w-full object-cover object-center"
+            <img
+              src=""
               alt="Blueprint Illustration"
-              format={"avif"}
+              class="h-full w-full object-cover object-center"
             />
           )
         }
@@ -238,11 +234,10 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       <div class="relative right-12 overflow-hidden rounded-xl shadow-xl">
         {
           product.data.blueprints.second && (
-            <Image
-              src={product.data.blueprints.second}
-              class="h-full w-full object-cover object-center"
+            <img
+              src=""
               alt="Blueprint Illustration"
-              format={"avif"}
+              class="h-full w-full object-cover object-center"
             />
           )
         }
