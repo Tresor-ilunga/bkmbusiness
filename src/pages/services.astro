@@ -23,7 +23,7 @@ interface Article {
   btnTitle?: string;
   btnURL?: string;
   single?: boolean;
-  img?: any;
+  image: string;
   imgAlt?: string;
   imgOne?: any;
   imgOneAlt?: string;
@@ -38,18 +38,14 @@ const articles: Article[] = [
     subTitle:
       "Notre entreprise de télécommunication propose un service de conception design innovant, spécifiquement adapté aux besoins des petites et moyennes entreprises (PME). Nous nous engageons à transformer vos idées en solutions visuelles captivantes et fonctionnelles.",
     single: false,
-    imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    image: "",
   },
   {
     isRightSection: false,
     title: "Couverture Événementielle pour PME",
     subTitle:
       "Nous proposons un service de couverture évementielle complet, conçu pour mettre en valeur vos événements et maximiser leur impact. Spécialement adapté aux petites et moyennes entreprises (PME), notre service garantit une visibilité accrue et un engagement renforcé.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
+    image: "",
     btnExists: true,
     btnTitle: "Contactez-nous",
     btnURL: "/contact",
@@ -60,19 +56,14 @@ const articles: Article[] = [
     subTitle:
       "Nous offrons un service complet d'élaboration de plans d'affaires, conçu pour guider les petites et moyennes entreprises (PME) ainsi que les particuliers vers le succès. Nous transformons vos idées en plans concrets et stratégiques, adaptés à vos besoins spécifiques.",
     single: false,
-    imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    image: "",
   },
   {
     isRightSection: false,
     title: "Impression sur Différents Supports pour PME et Particuliers",
     subTitle:
       "Nous proposons un service d&#39;impression polyvalent, conçu pour répondre aux besoins variés des petites et moyennes entreprises (PME) ainsi que des particuliers. Nous transformons vos concepts en supports tangibles de haute qualité, adaptés à chaque occasion.",
-    img: usingTools,
-    imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+    image: "",
   },
   {
     isRightSection: true,
@@ -80,13 +71,10 @@ const articles: Article[] = [
     subTitle:
       "Nous proposons la création de sites internet sur mesure, conçu pour répondre aux besoins des petites et moyennes entreprises (PME) ainsi que des particuliers. Nous vous aidons à établir une présence en ligne professionnelle et attrayante.",
     single: false,
-    imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
+    image: "",
     btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+    btnTitle: "Contactez-nous",
+    btnURL: "/contact",
   },
 ];
 
@@ -140,7 +128,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
         <LeftSection
           title={article.title}
           subTitle={article.subTitle}
-          img={article.img}
+          image="/images/services/"
           imgAlt={article.imgAlt}
           btnExists={article.btnExists}
           btnTitle={article.btnTitle}
@@ -153,7 +141,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
     title="By the Numbers"
     subTitle="Notre engagement en faveur de la qualité et de la fiabilité est évident dans chaque projet que nous entreprenons."
     mainStatTitle="96%"
-    mainStatSubTitle="Nos clients considèrent leur expérience avec  Bkmbusiness comme exceptionnelle"
+    mainStatSubTitle="Nos clients considèrent leur expérience avec  Bkmbusiness comme exceptionnelle."
     stats={[
       {
         stat: "+30",
