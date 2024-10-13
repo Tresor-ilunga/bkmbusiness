@@ -8,8 +8,7 @@ const { title, tabs } = Astro.props;
 interface Tab {
   heading: string;
   content: string;
-  svg: string;
-  src: any;
+  src: string;
   alt: string;
   first?: boolean;
   second?: boolean;
@@ -45,7 +44,7 @@ interface Props {
                 content={tab.content}
                 first={tab.first}
               >
-                <Icon name={tab.svg} />
+                <Icon name={tab.src} />
               </TabNav>
             ))
           }
