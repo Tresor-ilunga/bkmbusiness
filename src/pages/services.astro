@@ -76,22 +76,6 @@ const pageTitle: string = `Services | ${SITE.title}`;
 
 <MainLayout
   title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://",
-    url: "https://",
-    name: "Expert Consultation Services | ScrewFast",
-    description:
-      "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
-    isPartOf: {
-      "@type": "WebSite",
-      url: "https://screwfast.uk",
-      name: "ScrewFast",
-      description:
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-    },
-  }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
@@ -121,8 +105,6 @@ const pageTitle: string = `Services | ${SITE.title}`;
         <LeftServices
           title={article.title}
           subTitle={article.subTitle}
-          image="/images/services/"
-          imgAlt={article.imgAlt}
           btnExists={article.btnExists}
           btnTitle={article.btnTitle}
           btnURL={article.btnURL}
@@ -131,7 +113,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
     })
   }
   <FeaturesStats
-    title="By the Numbers"
+    title="Des résultats mesurables"
     subTitle="Notre engagement en faveur de la qualité et de la fiabilité est évident dans chaque projet que nous entreprenons."
     mainStatTitle="96%"
     mainStatSubTitle="Nos clients considèrent leur expérience avec  Bkmbusiness comme exceptionnelle."
