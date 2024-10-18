@@ -1,4 +1,6 @@
 ---
+// Import the required modules
+import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 // Extract properties from Astro.props
 const {
@@ -8,6 +10,10 @@ const {
   btnTitle,
   btnURL,
   single,
+  imgOne,
+  imgOneAlt,
+  imgTwo,
+  imgTwoAlt,
 } = Astro.props;
 // Define TypeScript interface for the properties
 interface Props {
@@ -48,25 +54,30 @@ interface Props {
     single ? (
       <div class="mt-8">
         <!-- Single image -->
-        <img 
+        <Image
           class="w-full rounded-lg"
-          src=""
-          alt="single image"
+          src={imgOne}
+          alt={imgOneAlt}
+          format={"avif"}
         />
       </div>
     ) : (
       <div class="mt-8 grid grid-cols-2 gap-4">
         <!-- First image in a two-image layout -->
-        <img
+        <Image
           class="w-full rounded-xl"
-          src="/images/services/d-1.webp"
-          alt="d-1"
+          src={imgOne}
+          alt={imgOneAlt}
+          draggable={"false"}
+          format={"avif"}
         />
         <!-- Second image in a two-image layout -->
-        <img
+        <Image
           class="mt-4 w-full rounded-xl lg:mt-10"
-          src="/images/services/d-2.webp"
-          alt="Second image"
+          src={imgTwo}
+          alt={imgTwoAlt}
+          draggable={"false"}
+          format={"avif"}
         />
       </div>
     )
