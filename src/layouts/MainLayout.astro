@@ -1,19 +1,25 @@
 ---
+// Importing necessary components
+import Meta from "@components/Meta.astro";
 import Navbar from "@components/sections/navbar&footer/Navbar.astro";
 import FooterSection from "@components/sections/navbar&footer/FooterSection.astro";
 import { SITE } from "@data/constants";
 
-const { title = SITE.title, lang = "en" } = Astro.props;
+// Setting expected props
+const { title = SITE.title, meta, structuredData, lang = "en" } = Astro.props;
 
+// Interface to type-check the properties
 interface Props {
   title?: string;
   meta?: string;
+  structuredData?: object;
   lang?: string;
 }
 ---
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
+    <Meta meta={meta} structuredData={structuredData} />
     <title>{title}</title>
     <script is:inline>
       if (
@@ -33,7 +39,6 @@ interface Props {
   <body
     class="bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800"
   >
-
     <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <Navbar />
       <main>
@@ -42,6 +47,7 @@ interface Props {
     </div>
     <FooterSection />
     <style>
+      /* CSS rules for the page scrollbar */
       .scrollbar-hide::-webkit-scrollbar {
         display: none;
       }

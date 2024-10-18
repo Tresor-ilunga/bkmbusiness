@@ -1,4 +1,3 @@
-
 const navBarLinks = [
   { name: "Accueil", url: "/fr" },
   { name: "À propos", url: "/fr/about" },
@@ -27,9 +26,6 @@ const footerLinks = [
 const socialLinks = {
   facebook: "#",
   x: "#",
-  github: "https://github.com/",
-  google: "#",
-  slack: "#",
 };
 
 export default {

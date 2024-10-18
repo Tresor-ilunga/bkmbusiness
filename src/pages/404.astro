@@ -10,8 +10,8 @@ type Translations = {
   [key in TranslationKeys]: {
     pageTitle: string;
     subTitle: string;
-    content: string;
     btnTitle: string;
+    btnURL: string;
   };
 };
 
@@ -19,18 +19,16 @@ type Translations = {
 const defaultLang: TranslationKeys = "en";
 const translations: Translations = {
   en: {
-    pageTitle: `Page Non Trouvée | ${SITE.title}`,
-    subTitle: "Oops, ce n'est pas la page que vous recherchiez!",
-    content:
-      "La page que vous recherchez est introuvable...",
-    btnTitle: "Retour à l'accueil",
+    pageTitle: `Page non trouvée | ${SITE.title}`,
+    subTitle: "Oops, this isn't the tool you were looking for!",
+    btnTitle: "Go Back",
+    btnURL: "/",
   },
   fr: {
     pageTitle: `Page Non Trouvée | ${SITE.title}`,
-    subTitle: "Oops, ce n'est pas l'outil que vous recherchiez!",
-    content:
-      "Ne laissez pas ce contretemps vous ralentir. Revenons à la construction de votre chef-d'œuvre.",
+    subTitle: "Oops, la page que vous recherchez n'existe pas !",
     btnTitle: "Retournez",
+    btnURL: "/",
   },
 };
 
@@ -41,7 +39,7 @@ const lang: TranslationKeys = langCodeMatch
   ? (langCodeMatch[1] as TranslationKeys)
   : defaultLang;
 
-const { pageTitle, subTitle, content, btnTitle } = translations[lang];
+const { pageTitle, subTitle, btnTitle } = translations[lang];
 ---
 
 <MainLayout title={pageTitle}>
@@ -63,7 +61,6 @@ const { pageTitle, subTitle, content, btnTitle } = translations[lang];
           id="content"
           class="mb-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
         >
-          {content}
         </p>
         <!-- Display a button that navigates user back to the previous page -->
         <Btn404 title={btnTitle} id="go-back" />
@@ -73,8 +70,10 @@ const { pageTitle, subTitle, content, btnTitle } = translations[lang];
 </MainLayout>
 
 <!-- JavaScript code to handle going back to the previous page -->
-<script is:inline>
-  document.getElementById("go-back")?.addEventListener("click", () => {
+<script>
+  const goBackButton = document.getElementById("go-back") as HTMLButtonElement;
+
+  goBackButton.addEventListener("click", () => {
     history.back();
   });
 </script>

@@ -9,6 +9,12 @@ interface Props {
 }
 ---
 
+<!--
+Re-usable link component for navigation bar. Highlights the active link
+by comparing the current URL with the href of each link.
+We assign an ID matching the URL for easy reference in our script.
+If URL is '/' (home page), assign ID as 'home' 
+-->
 <a
   id={url === "/" ? "home" : url.replace("/", "")}
   href={url}
@@ -21,6 +27,7 @@ interface Props {
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     let url = window.location.pathname;
+    let urlSegments = url.split("/");
     let navId;
 
     if (url === "/") {

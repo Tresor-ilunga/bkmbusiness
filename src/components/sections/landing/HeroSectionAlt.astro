@@ -1,8 +1,5 @@
 ---
-
 const { title, subTitle, url } = Astro.props;
-
-
 
 interface Props {
   title: string;
@@ -127,10 +124,5 @@ interface Props {
       )
     }
   </div>
-  {
-    url && (
-      <div class="mt-8 flex justify-center gap-3">
-      </div>
-    )
-  }
+  {url && <div class="mt-8 flex justify-center gap-3"></div>}
 </section>
