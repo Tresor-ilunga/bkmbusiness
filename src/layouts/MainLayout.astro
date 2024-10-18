@@ -1,22 +1,19 @@
 ---
-import Meta from "@components/Meta.astro";
 import Navbar from "@components/sections/navbar&footer/Navbar.astro";
 import FooterSection from "@components/sections/navbar&footer/FooterSection.astro";
 import { SITE } from "@data/constants";
 
-const { title = SITE.title, meta, structuredData, lang = "en" } = Astro.props;
+const { title = SITE.title, lang = "en" } = Astro.props;
 
 interface Props {
   title?: string;
   meta?: string;
-  structuredData?: object;
   lang?: string;
 }
 ---
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
-    <Meta meta={meta} structuredData={structuredData} />
     <title>{title}</title>
     <script is:inline>
       if (
