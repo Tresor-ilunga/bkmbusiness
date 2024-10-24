@@ -1,8 +1,6 @@
 ---
-// Import the required modules
 import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
-// Extract properties from Astro.props
 const {
   title,
   subTitle,
@@ -15,7 +13,6 @@ const {
   imgTwo,
   imgTwoAlt,
 } = Astro.props;
-// Define TypeScript interface for the properties
 interface Props {
   title: string;
   subTitle: string;
@@ -29,7 +26,6 @@ interface Props {
   imgTwoAlt?: any;
 }
 ---
-<!-- Root section of the component -->
 <section
   class="mx-auto max-w-[85rem] items-center gap-16 px-4 py-10 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8 lg:py-14 2xl:max-w-full"
 >

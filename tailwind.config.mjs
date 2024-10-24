@@ -14,7 +14,7 @@ export default {
       white: "#ffffff",
       gray: colors.gray,
       indigo: colors.indigo,
-      neutral: colors.neutral,  // Used mainly for text color
+      neutral: colors.neutral,
       yellow: {
         50: "#fefce8",
         100: "#fef9c3",
@@ -28,9 +28,9 @@ export default {
         400: "#fa5a15",
         500: "#e14d0b",
         600: "#ea580c",
-      }, // Primary colors, used mainly for links, buttons and svg icons
-      red: colors.red, // Used for bookmark icon
-      zinc: colors.zinc, // Used mainly for box-shadow
+      },
+      red: colors.red, 
+      zinc: colors.zinc,
     },
     extend: {},
   },

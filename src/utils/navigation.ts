@@ -24,8 +24,8 @@ const footerLinks = [
   },
 ];
 const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  x: "https://twitter.com/",
+  instagram: "https://www.instagram.com/_bkmbusiness_rdc_/profilecard/?igsh=OGg5Z3d5MnR3OW9h",
+  linkedin: "https://www.linkedin.com/company/bkm-business/",
 };
 
 export default {
